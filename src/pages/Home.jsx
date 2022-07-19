@@ -1,30 +1,10 @@
 import React from "react"
-import { v4 as uuidv4} from 'uuid'
 import Book from "../components/Book"
 import AddBook from "../components/AddBook"
-
-const books = [
-    {
-        id: uuidv4(),
-        genre: "Action",
-        title: "The Hunger Games",
-        producer: "Suzanne Collins"
-    },
-    {
-        id: uuidv4(),
-        genre: "Science Fiction",
-        title: "Dune",
-        producer: "Suzanne Collins"
-    },
-    {
-        id: uuidv4(),
-        genre: "Economy",
-        title: "Capital in the Twenty-First Century",
-        producer: "Suzanne Collins"
-    }
-]
+import { useSelector, useDispatch } from "react-redux"
 
 const Home = () => {
+    const books = useSelector(state => state.book.value)
     return (
         <div>
            {books.map(book => <Book book={book} key={book.id} />)}
@@ -32,5 +12,4 @@ const Home = () => {
         </div>
     )
 }
-
 export default Home

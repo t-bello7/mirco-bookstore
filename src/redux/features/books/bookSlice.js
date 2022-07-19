@@ -18,7 +18,9 @@ const BookSlice = createSlice({
       });
     },
     remove(state, action) {
-      state.value.filter((book) => action.id !== book.id);
+      const index = state.value.findIndex((item) => item.id === action.payload);
+      state.value.splice(index, 1);
+      return state;
     },
   },
 });
