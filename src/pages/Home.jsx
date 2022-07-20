@@ -1,7 +1,7 @@
 import React from "react"
 import Book from "../components/Book"
 import AddBook from "../components/AddBook"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 
 const Home = () => {
     const books = useSelector(state => state.book.value)

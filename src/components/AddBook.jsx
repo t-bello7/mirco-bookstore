@@ -32,10 +32,10 @@ const AddBook = () => {
     return (
         <form onSubmit={handleSubmit}>
             <h3> Add New Book    </h3>
-            <label >
+            <label for="title">
                 <input type="text" placeholder="Book Title" name="title" value={formInput.title} onChange={handleChange}/>
             </label>
-            <label>
+            <label for="name">
                 <select name="category" value={formInput.category} onChange={handleChange}>
                     <option value="economy">Economy</option>
                     <option value="action">Action</option>
