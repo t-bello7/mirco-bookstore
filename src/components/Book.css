@@ -1,4 +1,28 @@
 .book__container {
     margin-block: 2rem;
     margin-inline: 12%;
+    background-color: white;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.book__author{
+    color: var(--primary-color);
+}
+
+.book__button{
+    margin-top: 1rem;
+}
+
+.book__button > * {
+    border: 0;
+    color: var(--primary-color);
+    padding: 0.5rem;
+    background: none;
+    cursor: pointer;
+}
+
+.book__button > :not(:first-child){
+    border-left: 1px solid gray
 }

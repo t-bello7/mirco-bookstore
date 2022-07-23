@@ -12,16 +12,26 @@ const Book = ({id}) => {
     }
     return (
         <div className="container book__container">
-            <div>
+            <div >
                 <span>{category}</span>
-                <h2>{title}</h2>
-                <span>{author}</span>
+                <h2 >{title}</h2>
+                <span className="book__author">{author}</span>
 
-                <div className="flex">
+                <div className=" book__button flex">
                     <button>Comments</button>
                     <button type='button' onClick={()=>handleDelete(id)}>Remove</button>
                     <button>Edit</button>
                 </div>
+            </div>
+
+            <div>
+                64% completed
+            </div>
+
+            <div>
+                <span style={{display: "block", textTransform:"uppercase"}}>current chapter</span>
+                <span style={{display: "block"}}> Chapter 17</span>
+                <button className="btn"> UPDATE PROGRESS </button>
             </div>
            
         </div>
