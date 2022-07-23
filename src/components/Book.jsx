@@ -1,5 +1,5 @@
 import React from "react";
-import { remove, selectBooksById, deleteBook  } from "../redux/features/books/bookSlice";
+import { selectBooksById, deleteBook  } from "../redux/features/books/bookSlice";
 import { useSelector, useDispatch } from 'react-redux'
 
 
@@ -11,7 +11,7 @@ const Book = ({id}) => {
         dispatch(deleteBook(id))
     }
     return (
-        <div>
+        <div className="container">
             <span>{author}</span>
             <h2>{title}</h2>
             <span>{category}</span>
