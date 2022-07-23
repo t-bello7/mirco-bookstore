@@ -21,6 +21,12 @@ li {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+  color: #BABABA;
+}
+
+
 body {
   background-color: var(--secondary-color);
 }
@@ -35,13 +41,6 @@ body {
   gap: 1rem;
 }
 
-/* a {
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
-a:hover {
-} */
 
 h1 {
   font-size: 3.2em;

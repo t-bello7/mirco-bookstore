@@ -1,9 +1,12 @@
-.navbar {
-    height: 20vh;
+.navbar__container {
+    background-color: white;
     align-items: center;
-    height: 7vh;
+    justify-content: space-between;
+    height: 15vh;
+    margin-inline: 0;
+    padding-inline: 10%;
 }
 
-.navbar > :first-child{
+.navbar__container > :first-child{
     color: var(--primary-color);
 }
