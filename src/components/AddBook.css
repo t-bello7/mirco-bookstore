@@ -1,0 +1,18 @@
+.add__container {
+  padding-block: 2rem;
+  margin-inline: 12%;
+  border-top: 1px solid gray;
+}
+
+.add__container > :last-child {
+  justify-content: space-between;
+}
+
+.add__input {
+  padding: 1rem;
+  border: none;
+}
+
+.title {
+  width: 60ch;
+}
