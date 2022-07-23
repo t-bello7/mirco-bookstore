@@ -1,0 +1,9 @@
+.navbar {
+    height: 20vh;
+    align-items: center;
+    height: 7vh;
+}
+
+.navbar > :first-child{
+    color: var(--primary-color);
+}

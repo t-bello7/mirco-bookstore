@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import { useDispatch } from 'react-redux';
-import { add , addNewBook } from '../redux/features/books/bookSlice';
+import { addNewBook } from '../redux/features/books/bookSlice';
 import { v4 as uuidv4 } from 'uuid';
+import './AddBook.css'
 
 
 const AddBook = () => {
@@ -45,8 +46,9 @@ const AddBook = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="container">
+        <form onSubmit={handleSubmit} className="container add__container">
             <h3> Add New Book    </h3>
+            <div className="flex">
             <label htmlFor="title">
                 <input type="text" placeholder="Book Title" name="title" value={formInput.title} onChange={handleChange}/>
             </label>
@@ -62,6 +64,7 @@ const AddBook = () => {
                 </select>
             </label>
             <button type="submit">Add Book</button>
+            </div>
         </form>
     )
 }
