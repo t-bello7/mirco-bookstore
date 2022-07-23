@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
-import { remove } from "../redux/features/books/bookSlice";
-import { useDispatch } from 'react-redux'
+import React from "react";
+import { remove, selectBooksById, deleteBook  } from "../redux/features/books/bookSlice";
+import { useSelector, useDispatch } from 'react-redux'
 
-const Book = (props) => {
+
+const Book = ({id}) => {
+    const book = useSelector( state => selectBooksById(state, id) )
     const dispatch = useDispatch()
-    const {id,genre, title, producer } = props.book
-    
+    const {author, title, category} = book[0]
     const handleDelete = (id) => {
-        
-        // useEffect(()=>{
-            dispatch(remove(id))
-        // },[])
+        dispatch(deleteBook(id))
     }
     return (
         <div>
-            <span>{genre}</span>
+            <span>{author}</span>
             <h2>{title}</h2>
-            <span>{producer}</span>
+            <span>{category}</span>
             <button>Comments</button>
             <button type='button' onClick={()=>handleDelete(id)}>Remove</button>
             <button>Edit</button>
